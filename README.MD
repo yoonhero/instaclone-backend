@@ -8,9 +8,12 @@ Instaclone Backend.
 -   [x] See Profile
 -   [x] Login
 -   [x] Edit Profile
--   [ ] Follow User
--   [ ] Unfollow User
 -   [x] Change Avatar (Image Upload)
+-   [x] Follow User
+-   [x] Unfollow User
+-   [ ] See Followers and See Following w/ Pagination
+-   [ ] Computed Fields
+-   [ ] Search Users
 
 ## Photos
 
@@ -24,3 +27,7 @@ Instaclone Backend.
 -   [ ] See Hashtags
 
 ## Comments
+
+-   [ ] Comment on Photo
+-   [ ] Edit Comment
+-   [ ] Delete Comment

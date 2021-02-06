@@ -6,6 +6,11 @@ export default {
             where: {
                 username,
             },
+            // load all user
+            /*include: {
+                following: true,
+                followers: true,
+            }*/
         }),
     },
 };
