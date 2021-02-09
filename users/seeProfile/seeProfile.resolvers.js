@@ -7,10 +7,10 @@ export default {
                 username,
             },
             // load all user
-            /*include: {
+            include: {
                 following: true,
                 followers: true,
-            }*/
+            }
         }),
     },
 };
