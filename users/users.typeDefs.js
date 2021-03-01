@@ -1,6 +1,6 @@
-import { gql } from 'apollo-server';
+import { gql } from "apollo-server";
 
-export default gql `
+export default gql`
   type User {
     id: Int!
     firstName: String!
@@ -11,6 +11,7 @@ export default gql `
     updatedAt: String!
     bio: String
     avatar: String
+    photos: [Photo]
     following: [User]
     followers: [User]
     totalFollowing: Int!
