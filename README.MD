@@ -41,11 +41,13 @@ Instaclone Backend.
 
 ## Extras
 
-- [ ] S3 Image Upload
+- [x] S3 Image Upload
 
 ## DMs
 
-- [ ] Create Room
-- [ ] Get Room
-- [ ] Send Message
+- [x] See Rooms
+- [x] Send Message (Create Room)
+- [x] See Room
+- [ ] Computed Fields
+- [ ] See Message
 - [ ] Realtime Messages
