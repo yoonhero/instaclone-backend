@@ -31,7 +31,7 @@ export default {
               payload,
               room: {
                 connect: {
-                  id: newRoom.id,
+                  id: room.id,
                 },
               },
               user: {
