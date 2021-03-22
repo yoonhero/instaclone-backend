@@ -9,6 +9,7 @@ import { getUser } from "./users/users.utils";
 const apollo = new ApolloServer({
   resolvers,
   typeDefs,
+  playground: true,
   context: async (ctx) => {
     if (ctx.req) {
       return {
