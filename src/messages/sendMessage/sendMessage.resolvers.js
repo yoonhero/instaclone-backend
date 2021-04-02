@@ -28,21 +28,21 @@ export default {
               },
             },
           });
-          const newMessage = await client.message.create({
-            data: {
-              payload,
-              room: {
-                connect: {
-                  id: room.id,
-                },
-              },
-              user: {
-                connect: {
-                  id: loggedInUser.id,
-                },
-              },
-            },
-          });
+          // const newMessage = await client.message.create({
+          //   data: {
+          //     payload,
+          //     room: {
+          //       connect: {
+          //         id: room.id,
+          //       },
+          //     },
+          //     user: {
+          //       connect: {
+          //         id: loggedInUser.id,
+          //       },
+          //     },
+          //   },
+          // });
         } else if (roomId) {
           room = await client.room.findUnique({
             where: {
@@ -50,6 +50,7 @@ export default {
             },
             select: {
               id: true,
+              message: true,
             },
           });
           if (!room) {
@@ -74,9 +75,17 @@ export default {
             },
           },
         });
+        room.message.sort(function (a, b) {
+          return a.id - b.id;
+        });
+
         pubsub.publish(NEW_MESSAGE, { roomUpdates: { ...message } });
         return {
           ok: true,
+          id:
+            roomId !== undefined
+              ? room.message[room.message.length - 1].id + 1
+              : null,
         };
       }
     ),
